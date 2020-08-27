@@ -16,7 +16,7 @@ def load_data_in_es():
     r = requests.get(url)
     data = r.json()
     print("Loading data in elasticsearch ...")
-    for id, site in enumerate(data'features']):
+    for id, site in enumerate(data['features']):
         res = es.index(index="codata", doc_type="site", id=id, body=site)
     print("Total trucks loaded: ", len(data))
 
