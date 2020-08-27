@@ -39,7 +39,7 @@ def format_fooditems(string):
 
 def check_and_load_index():
     """ checks if index exits and loads the data accordingly """
-    if not safe_check_index('sfdata'):
+    if not safe_check_index('codata'):
         print("Index not found...")
         load_data_in_es()
 
